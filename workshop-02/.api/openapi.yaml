@@ -131,8 +131,7 @@ components:
           type: integer 
         customer:
           $ref: '#/components/schemas/Customer' 
-        name:
-          type: string
+        
         amount:
           type: number
         status:
