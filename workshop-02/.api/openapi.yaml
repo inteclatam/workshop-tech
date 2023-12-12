@@ -8,7 +8,7 @@ servers:
   - url: https://api.staging.intercom.com.co/v1
     description: QA
 paths:
-  /users:
+  /payments:
     get:
       summary: Get a list of payments with customer info
       security:
@@ -30,7 +30,16 @@ paths:
       responses:
         '201':
           description: Payment created successfully 
-  /users{paymentId}:
+  /payments/{paymentId}:
+    get:
+      summary: Get Payment By Id
+      parameters:
+        - name: paymentId
+          in: path
+          description: ID of Payment
+          required: true
+          schema:
+           type: integer
     put:
       summary: Update an existing payment
       security:
